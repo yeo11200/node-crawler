@@ -1,5 +1,5 @@
 ﻿# 1. express 활용 크롤링
-
+[NodeMVC 패턴](https://posnopi13.tistory.com/28?category=146024)
 ### 1. express 설치
 ```npm
 npm install --save express
@@ -7,6 +7,11 @@ npm install --save express
 or 
 
 yarn add express
+
+// express-generator는 express의 기본 틀을 가춘 프레임워크를 구조를 제공한다.
+npm install express-generator -g
+
+express preflem project_name
 ```
 
 ```js
