@@ -12,8 +12,13 @@ app.get('/', (req, res, next) =>{
 
         // return res.send(html);
         console.log(html.data);
-        // const $ = cheerio.load(html.data);
+        let $ = cheerio.load(html.data);
+        let smp = {};
 
+        $('input[name=admin_id]').val('yeo1120');
+        $('input[name=admin_pw]').val('123123');
+
+        // document.login.submit();
         // return res.json($);
     })
 });
