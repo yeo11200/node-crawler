@@ -14,10 +14,7 @@ app.get('/', (req, res, next) =>{
         console.log(html.data);
         let $ = cheerio.load(html.data);
         let smp = {};
-
-        $('input[name=admin_id]').val('yeo1120');
-        $('input[name=admin_pw]').val('123123');
-
+        
         // document.login.submit();
         // return res.json($);
     })
