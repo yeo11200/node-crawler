@@ -1,5 +1,6 @@
 ﻿# 1. express 활용 크롤링
 [NodeMVC 패턴](https://posnopi13.tistory.com/28?category=146024)
+[NodeMVC 2 패턴](https://gofnrk.tistory.com/65)
 ### 1. express 설치
 ```npm
 npm install --save express
