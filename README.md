@@ -61,8 +61,6 @@ npm install --save fs
 
 ```js
 const fs = require('fs');
-
-
 fs.writeFileSync("target.txt", '\ufeff' + text, {encoding: 'utf8'});
 ```
 ##### phantomjs : 커맨드라인(소스코드)으로 웹브라우저를 실행 시켜서 특정 값을 뽑아내거나 비교할 때 사용한다. 웹 브라우져는 로그인이나 특정 값들을 넣을 때 마우스로 클릭 하거나 탭으로 이동하고 해당 값들을 키보드나 마우스로 넣어주어야 한다.
@@ -75,3 +73,22 @@ fs.writeFileSync("target.txt", '\ufeff' + text, {encoding: 'utf8'});
 2. express를 이용해서 크롤링을 할 수 있다.
 
 두개 다 서버처럼 사용할 수 있지만, express는 node의 웹 프레임워크로 웹상으로 url를 이용해서 크롤링을 지속적으로 이용할 수 있다는 장점이있다.
+
+
+#### 3. git 대용량 파일 올리기
+```git
+// git large files = 큰 파일을 올리는 저장소
+git lfs install
+
+// 파일을 올릴 확장자 && git igrone와 비슷한 역할
+git lfs track "*.dll"
+git lfs track "*.exe"
+
+// 만약에 잘못올린게 있다면
+git repack
+git gc
+
+// 가끔 올리는 상태에서 캐쉬가 남아있는 경우가 있다.
+git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch file_name or directory'
+
+```
