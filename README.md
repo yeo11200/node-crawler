@@ -63,6 +63,15 @@ npm install --save fs
 const fs = require('fs');
 fs.writeFileSync("target.txt", '\ufeff' + text, {encoding: 'utf8'});
 ```
+
+### 6. puppeteer js
+```npm
+npm install --save puppeteer
+```
+
+```js
+const puppeteer = require('puppeteer');
+```
 ##### phantomjs : 커맨드라인(소스코드)으로 웹브라우저를 실행 시켜서 특정 값을 뽑아내거나 비교할 때 사용한다. 웹 브라우져는 로그인이나 특정 값들을 넣을 때 마우스로 클릭 하거나 탭으로 이동하고 해당 값들을 키보드나 마우스로 넣어주어야 한다.
 ##### casperjs : 팬텀 js를 조금 더 세밀하게 컨트롤 할 수 있는 기능들을 묶어놓은 라이브러리이다.
 ##### cheerio은 데이터를 가지고오는 정도이고, phantomjs는 조금 더 정밀한 크롤링을 가능하게 한다.
