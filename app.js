@@ -73,6 +73,8 @@ app.get('/', async (req, res, next) =>{
 
         await page.goto(url3);
 
+        await page.waitForNavigation( );
+        
         content2 = await page.content();
         $ = cheerio.load(content2);
 
