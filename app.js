@@ -69,18 +69,21 @@ app.get('/', async (req, res, next) =>{
     lists.each(async (index, value) => {
         console.log(value.attribs.href);
 
-        url3 = value.attribs.href;
+        setTimeout(() => {
 
-        await page.goto(url3);
+            url3 = value.attribs.href;
 
-        await page.waitForNavigation( );
-        
-        content2 = await page.content();
-        $ = cheerio.load(content2);
-
-        lists2 = $('body');
-
-        fs.writeFileSync("target.txt", '\ufeff' + lists, {encoding: 'utf8'});
+            await page.goto(url3);
+    
+            await page.waitForNavigation( );
+            
+            content2 = await page.content();
+            $ = cheerio.load(content2);
+    
+            lists2 = $('body');
+    
+            fs.writeFileSync("target"+index+".txt", '\ufeff' + lists, {encoding: 'utf8'});
+        }, 4000);
     });
 });
 
