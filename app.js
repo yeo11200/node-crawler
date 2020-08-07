@@ -19,7 +19,7 @@ const port = process.env.PORT || 5000;
  */
 app.get('/', async (req, res, next) =>{
 
-    let url = 'http://new.mint05.com/ADMINISTRATOR/main/login.html';
+    // let url = 'http://new.mint05.com/ADMINISTRATOR/main/login.html';
 
     /**
      * puppeteer.launch() : headless -> 브라우저 실행여부(default : true = 실행안합, false = 실행) 
@@ -57,7 +57,7 @@ app.get('/', async (req, res, next) =>{
     /**
      * 무한 반복으로 데이터 추가
      */
-    let url2 = 'http://new.mint05.com/ADMINISTRATOR/marketing/marketing.php?pagesize=20&type=&keyword=&s_date1=&e_date1=&s_date2=&e_date2=&order=muu.muu_key&order_val=DESC&page=1';
+    // let url2 = 'http://new.mint05.com/ADMINISTRATOR/marketing/marketing.php?pagesize=20&type=&keyword=&s_date1=&e_date1=&s_date2=&e_date2=&order=muu.muu_key&order_val=DESC&page=1';
 
     await page.goto(url2);
 
